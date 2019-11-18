@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useCallback, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import {
   CounterIncrementAction,
@@ -10,6 +10,12 @@ function Counter() {
   const dispatch = useDispatch();
   const handleDispatchIcremenent = () => dispatch(CounterIncrementAction());
   const handleDispatchDecrement = () => dispatch(CounterDecrementAction());
+  const handleChangeValue = useCallback(() => {
+    console.log(value);
+  }, [value]);
+  useEffect(() => {
+    handleChangeValue();
+  });
   return (
     <div className="row">
       <div className="col s3 center-align" style={{ marginTop: "23px" }}>

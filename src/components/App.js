@@ -1,17 +1,10 @@
 import React from "react";
-import Counter from "./Counter";
-import Name from "./Name";
+import People from "./People";
 
 function App() {
   return (
     <div className="container">
-      <div>
-        <Counter />
-      </div>
-      <hr />
-      <div>
-        <Name />
-      </div>
+      <People />
     </div>
   );
 }
